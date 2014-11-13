@@ -1,0 +1,188 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Vitapet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+
+            var meuLocal = new google.maps.LatLng(53.385873, -1.471471); //Latitudo e Longitude
+
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 17,
+                disableDefaultUI: true,
+
+                center: meuLocal, //ponto central será o meu local
+
+                // The latitude and longitude to center the map (always required)
+                // New York
+
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{"featureType":"poi","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":0},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"transit","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":0},{"lightness":-100},{"visibility":"off"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbbbbb"},{"saturation":-100},{"lightness":26},{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#dddddd"},{"saturation":-100},{"lightness":-3},{"visibility":"on"}]}]
+
+
+            };
+
+
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('mapa');
+
+
+
+
+            // Create the Google Map using out element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            var imagem = 'img/pin.png';
+
+            var marker = new google.maps.Marker({
+                position: meuLocal,
+                map: map,
+                title: 'VitaPet',
+                icon: imagem
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="full">
+        <div id="intro" class="slide">
+            <div class="logo">
+                <img src="img/logo-grande.png" alt="">
+            </div>
+        </div>
+
+        <div id="slogan" class="slide">
+            <div class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="sobre" class="slide">
+        <div class="linha linha1">
+            <div class="bloco imagem">
+                <div class="conteudo">
+                    LEGENDA AQUI
+                </div>
+            </div>
+            <div class="seta-esquerda"></div>
+
+            <div class="bloco texto">
+                <div class="conteudo">
+                    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sequi neque libero reiciendis placeat obcaecati, ducimus.</p>
+                    <p>Lorem ipsum dolor sit amet, blanditiis harum dolorum earum commodi eum. Enim et, totam illo assumenda libero necessitatibus a voluptatem tempora nam ducimus numquam corporis doloremque animi iusto pariatur, ullam qui doloribus veniam aliquid?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="linha linha2">
+            <div class="bloco imagem end">
+                <div class="conteudo">
+                    LEGENDA AQUI
+                </div>
+            </div>
+
+            <div class="seta-direita"></div>
+
+            <div class="bloco texto">
+                <div class="conteudo">
+                    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sequi neque libero reiciendis placeat obcaecati, ducimus ex? Doloremque maxime modi accusamus fugit explicabo praesentium, tempore doloribus dicta esse ipsam expedita.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia distinctio eos labore, voluptate aspernatur quam similique quis fugit nobis accusamus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="servicos" class="slide grid wfull">
+
+        <div class="row">
+            <div class="c3 servico">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus laboriosam quam architecto, quas, magnam? Expedita totam fugiat fugit harum!</p>
+
+                <div class="icone">
+                    <i class="fa fa-ambulance"></i>
+                </div>
+
+            </div>
+            <div class="c3 servico">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus laboriosam quam architecto, quas, magnam? Expedita totam fugiat fugit harum!</p>
+
+                <div class="icone">
+                    <i class="fa fa-stethoscope"></i>
+                </div>
+
+            </div>
+            <div class="c3 servico">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus laboriosam quam architecto, quas, magnam? Expedita totam fugiat fugit harum!</p>
+
+                <div class="icone">
+                    <i class="fa fa-medkit"></i>
+                </div>
+
+            </div>
+            <div class="c3 servico">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus laboriosam quam architecto, quas, magnam? Expedita totam fugiat fugit harum!</p>
+
+                <div class="icone">
+                    <i class="fa fa-user-md"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contato" class="slide">
+
+        <div class="bloco texto">
+            <div class="conteudo">
+                <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quaerat omnis voluptas impedit praesentium asperiores sit aliquid, quo, dolore deserunt.</p>
+
+                <p class="intro">
+                    21 9999-9999<br>
+                    21 9999-9999<br>
+                </p>
+            </div>
+
+        </div>
+        <div class="bloco">
+            <div id="mapa"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

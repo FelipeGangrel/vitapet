@@ -1,0 +1,247 @@
+@import url(gridiculous.css);
+@import url(font-awesome.min.css);
+
+
+html, body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    font-size: 105%;
+}
+.full{
+    height: 100%;
+}
+#intro{
+    position: relative;
+    height: 70%;
+    background-color: #333;
+    background-image: url(../img/fundo-intro.jpg);
+
+    background-position: center center;
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    background-size: cover;
+
+    display: block;
+    width: 100%;
+}
+#intro .logo{
+    width: 100%;    
+    height: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#slogan{
+    position: relative;
+    height: 30%;
+    background-color: #fff;
+    color: #333;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-left: 20px; padding-right: 20px;
+}
+
+#slogan .texto{
+    width: 100%;    
+    height: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#sobre{
+    background-color: rgb(237,30,121);
+    min-height: 1000px;
+}
+/*
+.linha:before{
+content: '';
+display: table;
+width: 100%;
+}
+.linha:after{
+clear: both;
+}*/
+.bloco{
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    height: 500px;
+    position: relative;
+}
+p.intro{
+    font-size: 1.2em;
+}
+
+.bloco.imagem{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /*
+    -ms-background-size: cover;
+    background-size: cover;*/
+
+    display: block;
+    height: 500px;
+}
+.linha1 .bloco.imagem{
+    background-image: url(../img/img1.jpg);
+    background-position: center left;
+}
+.linha2 .bloco.imagem{
+    background-image: url(../img/img2.jpg);
+    background-position: center right;
+}
+.bloco.texto{
+    padding: 40px;
+    display: block;
+    height: 500px;
+    color: #fff;
+    background-color: rgb(46, 204, 113);
+    border: none;
+}
+.conteudo{
+    height: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.bloco.imagem .conteudo{
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+}
+.end{
+    float: right!important;
+}
+
+
+.seta-esquerda {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right:20px solid #2ecc71;
+    float: right;
+    margin-bottom: -40px;
+    position: relative;
+    top: 230px;
+    right: 50%;
+    z-index: 10;
+}
+
+.seta-direita {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-left:20px solid #2ecc71;
+    float: right;
+    margin-bottom: -40px;
+    position: relative;
+    top: 230px;
+    left: 20px;
+    z-index: 10;
+}
+
+#servicos{
+    padding-top: 50px; padding-bottom: 50px;
+    padding-left: 20px; padding-right: 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.icone{
+    width: 120px;
+    height: 120px;
+    background-color: #333;
+    font-size: 3.5rem;
+    color: #fff;
+    line-height: 120px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 30px auto 0px auto;
+
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+.servico:hover .icone{
+    background-color: #2ecc71;
+}
+
+#contato{
+    background-color: #27ae60;
+}
+
+#contato .bloco.texto{
+    background-color: #333;
+    color: #fff;
+}
+
+.mapa{
+    width: 100%;
+    height: 500px;
+    background-color: #27ae60;
+}
+#mapa{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1024px){
+    .bloco.texto{
+        padding: 20px;
+    }
+    #servicos{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    #sobre{
+        min-height: 0;
+    }
+    .bloco{
+        width: 100%;
+    }
+    .bloco.imagem{
+        height: 200px;
+        background-position: center center;
+        -ms-background-size: cover;
+        background-size: cover;
+    }
+    .bloco.texto{
+        height: auto;
+    }
+    .conteudo{
+        height: auto;
+        position: relative;
+        top: 0%;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    .bloco.imagem .conteudo{
+        height: auto;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .seta-esquerda, .seta-direita{
+        display: none;
+    }
+}
